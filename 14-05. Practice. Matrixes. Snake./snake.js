@@ -23,6 +23,28 @@ class Snake {
             return output;
         }
 
+        function whileHorizontal(matrix) {
+            const output = [];
+            let row = 0;
+            while (row < matrix.length) {
+                if (row % 2 === 0) { //четная строка ('четная' - потому что отсчет с 0)
+                    let column = 0
+                    while (column < matrix[row].length;) {
+                        output.push(matrix[row][column]);
+                        column++;
+                    }
+                } else {
+                    let column = matrix[row].length - 1;
+                    while (column >= 0) {
+                        output.push(matrix[row][column]);
+                        column--;
+                    }
+                }
+                row++;
+            } 
+            return output;
+        }
+
         function forHorizontalInverted(matrix) {
             const output = [];
             for (let row = 0; row < matrix.length; row++ ) {
@@ -37,6 +59,30 @@ class Snake {
                 }
             }
             return output;
-    }
+        }
+
+        function whileHorizontalInverted(matrix) {
+            const output = [];
+            let row = 0;
+            while (row < matrix.length) {
+                if (row % 2 === 0) { //четная строка ('четная' - потому что отсчет с 0)
+                    let column = 0;
+                    while (column < matrix[row].length) {
+                        output.push(matrix[row][column]);
+                        column++;
+                    }
+                } else {
+                    let column = matrix[row].length - 1;
+                    while (column >= 0) {
+                        output.push(matrix[row][column]);
+                        column--;
+                    }
+                }
+                row++;
+            }
+            return output;
 }
 }
+}
+
+
