@@ -1,0 +1,27 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+}
+canvas {
+  display: block;
+}
+
+:root {
+  --heart-color: #ff0080;
+}
+
+
+#label {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    color: #ff66aa;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 0 0 10px #ff99cc;
+    pointer-events: none; /* чтобы не мешал клику по canvas */
+    z-index: 10;
+}
